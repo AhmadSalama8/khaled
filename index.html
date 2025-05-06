@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>صدقة جارية</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       background-color: #f2f2f2;
       font-family: 'Arial', sans-serif;
@@ -27,8 +31,8 @@
     }
 
     .share-buttons a img {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
 
     .counter {
@@ -37,20 +41,23 @@
     }
 
     h1 {
-      font-size: 2em;
+      font-size: 6vw;
       color: #333;
       margin: 30px 10px 20px;
     }
 
     img {
-      max-width: 90%;
+      width: 90%;
+      max-width: 500px;
       height: auto;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     audio {
-      margin: 20px 0;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 500px;
     }
 
     .box {
@@ -60,8 +67,17 @@
       margin: 20px auto;
       max-width: 600px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 1.2em;
-      line-height: 1.6;
+      font-size: 4vw;
+      line-height: 1.7;
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+      .box {
+        font-size: 1.2em;
+      }
     }
 
     footer {
@@ -91,19 +107,21 @@
 
   <h1>صدقة جارية علي روح عمي خالد عبدالله مشحوت</h1>
 
-  <img src="IMG-20240921-WA0077~2.jpg" alt="صورة عمي">
+  <img src="IMG-20240921-WA0077~2.jpg" alt="صورة عمي" />
 
   <audio controls autoplay>
-    <source src="alfatiha.mp3" type="audio/mpeg">
+    <source src="alfatiha.mp3" type="audio/mpeg" />
     المتصفح لا يدعم تشغيل الصوت.
   </audio>
 
   <div class="box">
-    <strong>الدعاء:</strong> اللهم ارحمه واغفر له وتجاوز عن سيئاته، واجعل قبره روضة من رياض الجنة.
+    <strong>الدعاء:</strong><br>
+    اللهم ارحمه واغفر له وتجاوز عن سيئاته، واجعل قبره روضة من رياض الجنة.
   </div>
 
   <div class="box">
-    <strong>الحديث:</strong> قال رسول الله ﷺ: "إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم يُنتفع به، أو ولد صالح يدعو له."
+    <strong>الحديث:</strong><br>
+    قال رسول الله ﷺ: "إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم يُنتفع به، أو ولد صالح يدعو له."
   </div>
 
   <footer>
