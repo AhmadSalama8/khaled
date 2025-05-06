@@ -2,111 +2,113 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>صدقة جارية</title>
   <style>
     body {
+      background-color: #f2f2f2;
       font-family: 'Arial', sans-serif;
-      background-color: #f0f0f0;
-      text-align: center;
       margin: 0;
       padding: 0;
+      text-align: center;
     }
 
-    .top-bar {
+    header {
       display: flex;
-      justify-content: flex-end;
-      align-items: center;
+      justify-content: space-between;
+      align-items: flex-start;
       padding: 10px 20px;
-      background-color: #fff;
+      flex-wrap: wrap;
+    }
+
+    .share-buttons {
+      display: flex;
       gap: 10px;
     }
 
-    .top-bar a img {
+    .share-buttons a img {
       width: 32px;
       height: 32px;
     }
 
-    .visitor-counter {
-      margin-left: auto;
+    .counter {
+      font-size: 14px;
+      margin-top: 5px;
     }
 
     h1 {
-      font-size: 38px;
-      margin: 30px 0 10px;
+      font-size: 2em;
       color: #333;
+      margin: 30px 10px 20px;
     }
 
     img {
-      width: 280px;
+      max-width: 90%;
       height: auto;
       border-radius: 12px;
-      margin-top: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
 
     audio {
       margin: 20px 0;
     }
 
-    .section {
+    .box {
       background-color: #fff;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 600px;
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      font-size: 1.2em;
+      line-height: 1.6;
     }
 
-    .designer {
-      margin: 40px 0 20px;
-      font-size: 20px;
-      color: #444;
+    footer {
+      margin-top: 40px;
+      padding: 10px;
+      font-size: 1.1em;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <!-- الشريط العلوي: مشاركة + عداد الزوار -->
-  <div class="top-bar">
-    <a href="https://wa.me/?text=https://ahmadsalama8.github.io/khaled" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="واتساب">
-    </a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=https://ahmadsalama8.github.io/khaled" target="_blank">
-      <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="فيسبوك">
-    </a>
-
-    <!-- عداد الزوار -->
-    <div class="visitor-counter">
-      <script type="text/javascript" src="https://www.freevisitorcounters.com/auth.php?id=9a4056eb9dad1fd19c5dc9845334f81935d6418b"></script>
+  <header>
+    <div class="share-buttons">
+      <a href="https://wa.me/?text=https://ahmadsalama8.github.io/khaled" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+      </a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://ahmadsalama8.github.io/khaled" target="_blank">
+        <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook">
+      </a>
+    </div>
+    <div class="counter">
+      <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=9a4056eb9dad1fd19c5dc9845334f81935d6418b'></script>
       <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1337033/t/0"></script>
     </div>
-  </div>
+  </header>
 
-  <!-- العنوان والنص -->
-  <h1>صدقة جارية على روح عمي خالد عبدالله مشحوت</h1>
+  <h1>صدقة جارية علي روح عمي خالد عبدالله مشحوت</h1>
+
   <img src="IMG-20240921-WA0077~2.jpg" alt="صورة عمي">
 
-  <!-- زر تشغيل سورة الفاتحة -->
   <audio controls autoplay>
     <source src="alfatiha.mp3" type="audio/mpeg">
-    متصفحك لا يدعم تشغيل الصوت.
+    المتصفح لا يدعم تشغيل الصوت.
   </audio>
 
-  <!-- الدعاء -->
-  <div class="section">
-    <h3>دعاء للميت</h3>
-    <p>اللهم ارحم خالد عبدالله مشحوت واغفر له، واجعل قبره روضة من رياض الجنة، ونقّه من الذنوب كما يُنقّى الثوب الأبيض من الدنس.</p>
+  <div class="box">
+    <strong>الدعاء:</strong> اللهم ارحمه واغفر له وتجاوز عن سيئاته، واجعل قبره روضة من رياض الجنة.
   </div>
 
-  <!-- حديث -->
-  <div class="section">
-    <h3>حديث شريف</h3>
-    <p>قال رسول الله ﷺ: "إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم يُنتفع به، أو ولد صالح يدعو له".</p>
+  <div class="box">
+    <strong>الحديث:</strong> قال رسول الله ﷺ: "إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم يُنتفع به، أو ولد صالح يدعو له."
   </div>
 
-  <!-- اسم المصمم -->
-  <div class="designer">
-    المصمم: أحمد سلامة عبدالله
-  </div>
+  <footer>
+    المصمم: احمد سلامة عبدالله
+  </footer>
 
 </body>
 </html>
