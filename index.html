@@ -5,91 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>صدقة جارية</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #f2f2f2;
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      padding: 10px 20px;
-      flex-wrap: wrap;
-    }
-
-    .share-buttons {
-      display: flex;
-      gap: 10px;
-    }
-
-    .share-buttons a img {
-      width: 28px;
-      height: 28px;
-    }
-
-    .counter {
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    h1 {
-      font-size: 6vw;
-      color: #333;
-      margin: 30px 10px 20px;
-    }
-
-    img {
-      width: 90%;
-      max-width: 500px;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    audio {
-      margin: 20px auto;
-      width: 90%;
-      max-width: 500px;
-    }
-
-    .box {
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 15px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      font-size: 4vw;
-      line-height: 1.7;
-    }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 2em;
-      }
-      .box {
-        font-size: 1.2em;
-      }
-    }
-
-    footer {
-      margin-top: 40px;
-      padding: 10px;
-      font-size: 1.1em;
-      color: #555;
-    }
+    * {box-sizing: border-box}
+    body {background-color: #f2f2f2;font-family: 'Arial', sans-serif;margin: 0;padding: 0;text-align: center}
+    header {display: flex;justify-content: space-between;align-items: flex-start;padding: 10px 20px;flex-wrap: wrap}
+    .share-buttons {display: flex;gap: 10px}
+    .share-buttons a img {width: 28px;height: 28px}
+    .counter {font-size: 14px;margin-top: 5px}
+    h1 {font-size: 6vw;color: #333;margin: 30px 10px 20px}
+    img {width: 90%;max-width: 500px;height: auto;border-radius: 12px;box-shadow: 0 4px 8px rgba(0,0,0,0.2)}
+    audio {margin: 20px auto;width: 90%;max-width: 500px}
+    .box {background-color: #fff;border-radius: 12px;padding: 15px;margin: 20px auto;max-width: 600px;box-shadow: 0 4px 10px rgba(0,0,0,0.1);font-size: 4vw;line-height: 1.7}
+    @media (min-width: 768px) {h1 {font-size: 2em}.box {font-size: 1.2em}}
+    footer {margin-top: 40px;padding: 10px;font-size: 1.1em;color: #555}
+    .tasbih-box {background-color: #fff;border-radius: 12px;padding: 15px;margin: 15px auto;max-width: 600px;box-shadow: 0 4px 10px rgba(0,0,0,0.1);font-size: 4vw;line-height: 1.7}
+    .count-circle {width: 60px;height: 60px;border-radius: 50%;background: #ffeecd;display: flex;align-items: center;justify-content: center;margin: auto;font-size: 1.5em;margin-bottom: 10px}
+    button {padding: 8px 15px;font-size: 1em;border: none;border-radius: 5px;background-color: #4CAF50;color: white;cursor: pointer;margin-top: 10px}
+    button:hover {background-color: #45a049}
+    @media (min-width: 768px) {.tasbih-box {font-size: 1.2em}.count-circle {font-size: 1.2em;width: 70px;height: 70px}}
   </style>
 </head>
 <body>
-
   <header>
     <div class="share-buttons">
       <a href="https://wa.me/?text=https://ahmadsalama8.github.io/khaled" target="_blank">
@@ -106,9 +41,7 @@
   </header>
 
   <h1>صدقة جارية علي روح عمي خالد عبدالله مشحوت</h1>
-
   <img src="IMG-20240921-WA0077~2.jpg" alt="صورة عمي" />
-
   <audio controls autoplay>
     <source src="alfatiha.mp3" type="audio/mpeg" />
     المتصفح لا يدعم تشغيل الصوت.
@@ -118,15 +51,52 @@
     <strong>الدعاء:</strong><br>
     اللهم ارحمه واغفر له وتجاوز عن سيئاته، واجعل قبره روضة من رياض الجنة.
   </div>
-
   <div class="box">
     <strong>الحديث:</strong><br>
     قال رسول الله ﷺ: "إذا مات ابن آدم انقطع عمله إلا من ثلاث: صدقة جارية، أو علم يُنتفع به، أو ولد صالح يدعو له."
+  </div>
+
+  <div class="tasbih-box">
+    <div class="count-circle" id="counter1">0 / 33</div>
+    <div>اللهم اغفر له و ارحمه</div>
+    <button onclick="incrementCounter('counter1')">تسبيح</button>
+  </div>
+  <div class="tasbih-box">
+    <div class="count-circle" id="counter2">0 / 33</div>
+    <div>اللهم عافه و اعف عنه</div>
+    <button onclick="incrementCounter('counter2')">تسبيح</button>
+  </div>
+  <div class="tasbih-box">
+    <div class="count-circle" id="counter3">0 / 33</div>
+    <div>اللهم اكرم نزله و وسع مدخله</div>
+    <button onclick="incrementCounter('counter3')">تسبيح</button>
+  </div>
+  <div class="tasbih-box">
+    <div class="count-circle" id="counter4">0 / 33</div>
+    <div>اللهم باعد بينه و بين النار و قه عذاب القبر</div>
+    <button onclick="incrementCounter('counter4')">تسبيح</button>
   </div>
 
   <footer>
     المصمم: احمد سلامة عبدالله
   </footer>
 
+  <script>
+    function incrementCounter(id) {
+      let count = parseInt(localStorage.getItem(id)) || 0;
+      if (count < 33) {
+        count++;
+        localStorage.setItem(id, count);
+      }
+      document.getElementById(id).textContent = count + " / 33";
+    }
+
+    window.onload = function() {
+      ['counter1','counter2','counter3','counter4'].forEach(id => {
+        let count = parseInt(localStorage.getItem(id)) || 0;
+        document.getElementById(id).textContent = count + " / 33";
+      });
+    }
+  </script>
 </body>
 </html>
